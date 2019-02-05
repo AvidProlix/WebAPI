@@ -53,6 +53,8 @@ namespace CodingChallenge.Controllers
         [HttpPost]
         public async Task<ActionResult<TriangleItem>> PostTriangleItem(TriangleItem item)
         {
+            // compute verticies before adding to db
+            item.findVertices();
             _context.TriangleItems.Add(item);
             await _context.SaveChangesAsync();
 

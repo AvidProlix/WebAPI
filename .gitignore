@@ -1,1 +1,3 @@
 *.sln
+CodingChallenge\bin\*
+CodingChallenge\obj\*
