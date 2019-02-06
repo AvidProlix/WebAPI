@@ -54,14 +54,15 @@ namespace CodingChallenge.Controllers
         [HttpPost]
         public async Task<ActionResult<TriangleItem>> PostTriangleItem(TriangleItem item)
         {
-            // compute verticies or grid value before adding to db
-            //if (item.vertexDefined())
-            //{
-            //    item.findGridCoords();
-            //}
-            //else if(item.gridDefined()) {
-            //    item.findVertices();
-            //}
+            //compute verticies or grid value before adding to db
+            if (item.VertexDefined())
+            {
+                item.FindGridCoords();
+            }
+            else if (item.GridDefined())
+            {
+                item.FindVertices();
+            }
             _context.TriangleItems.Add(item);
             await _context.SaveChangesAsync();
 
