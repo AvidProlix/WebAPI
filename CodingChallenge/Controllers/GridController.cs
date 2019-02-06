@@ -22,12 +22,13 @@ namespace CodingChallenge.Controllers
 
             if (_context.TriangleItems.Count() == 0)
             {
-                // Create a new TodoItem if collection is empty,
-                // which means you can't delete all TodoItems.
-                _context.TriangleItems.Add(new TriangleItem { V1x = 10, V1y = 0 });
+                // Create a new TriangleItem if collection is empty,
+                // which means you can't delete all TriangleItems.
+                _context.TriangleItems.Add(new TriangleItem { V1x = 10 });
                 _context.SaveChanges();
             }
         }
+
         // GET: api/Grid
         [HttpGet]
         public async Task<ActionResult<IEnumerable<TriangleItem>>> GetTriangleItems()
@@ -53,8 +54,14 @@ namespace CodingChallenge.Controllers
         [HttpPost]
         public async Task<ActionResult<TriangleItem>> PostTriangleItem(TriangleItem item)
         {
-            // compute verticies before adding to db
-            item.findVertices();
+            // compute verticies or grid value before adding to db
+            //if (item.vertexDefined())
+            //{
+            //    item.findGridCoords();
+            //}
+            //else if(item.gridDefined()) {
+            //    item.findVertices();
+            //}
             _context.TriangleItems.Add(item);
             await _context.SaveChangesAsync();
 
