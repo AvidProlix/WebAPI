@@ -3,7 +3,6 @@ C:\Users\etstr\CSProjects\WebAPI\CodingChallenge\bin\Debug\netcoreapp2.1\CodingC
 C:\Users\etstr\CSProjects\WebAPI\CodingChallenge\bin\Debug\netcoreapp2.1\CodingChallenge.runtimeconfig.dev.json
 C:\Users\etstr\CSProjects\WebAPI\CodingChallenge\bin\Debug\netcoreapp2.1\CodingChallenge.dll
 C:\Users\etstr\CSProjects\WebAPI\CodingChallenge\bin\Debug\netcoreapp2.1\CodingChallenge.pdb
-C:\Users\etstr\CSProjects\WebAPI\CodingChallenge\obj\Debug\netcoreapp2.1\CodingChallenge.csprojAssemblyReference.cache
 C:\Users\etstr\CSProjects\WebAPI\CodingChallenge\obj\Debug\netcoreapp2.1\CodingChallenge.csproj.CoreCompileInputs.cache
 C:\Users\etstr\CSProjects\WebAPI\CodingChallenge\obj\Debug\netcoreapp2.1\CodingChallenge.RazorAssemblyInfo.cache
 C:\Users\etstr\CSProjects\WebAPI\CodingChallenge\obj\Debug\netcoreapp2.1\CodingChallenge.RazorAssemblyInfo.cs
@@ -12,3 +11,4 @@ C:\Users\etstr\CSProjects\WebAPI\CodingChallenge\obj\Debug\netcoreapp2.1\CodingC
 C:\Users\etstr\CSProjects\WebAPI\CodingChallenge\obj\Debug\netcoreapp2.1\CodingChallenge.RazorTargetAssemblyInfo.cache
 C:\Users\etstr\CSProjects\WebAPI\CodingChallenge\obj\Debug\netcoreapp2.1\CodingChallenge.dll
 C:\Users\etstr\CSProjects\WebAPI\CodingChallenge\obj\Debug\netcoreapp2.1\CodingChallenge.pdb
+C:\Users\etstr\CSProjects\WebAPI\CodingChallenge\obj\Debug\netcoreapp2.1\CodingChallenge.csprojAssemblyReference.cache
