@@ -85,6 +85,37 @@ function addItem() {
     });
 }
 
+function addItemByVertecies() {
+    const item = {
+        v1x: $("#add-v1x").val(),
+        v1y: $("#add-v1y").val(),
+        v2x: $("#add-v2x").val(),
+        v2y: $("#add-v2y").val(),
+        v3x: $("#add-v3x").val(),
+        v3y: $("#add-v3y").val()
+    };
+
+    $.ajax({
+        type: "POST",
+        accepts: "application/json",
+        url: uri,
+        contentType: "application/json",
+        data: JSON.stringify(item),
+        error: function (jqXHR, textStatus, errorThrown) {
+            alert("Something went wrong!");
+        },
+        success: function (result) {
+            getData();
+            $("#add-v1x").val("");
+            $("#add-v1y").val("");
+            $("#add-v2x").val("");
+            $("#add-v2y").val("");
+            $("#add-v3x").val("");
+            $("#add-v3y").val("");
+        }
+    });
+}
+
 function deleteItem(id) {
     $.ajax({
         url: uri + "/" + id,
