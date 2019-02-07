@@ -33,6 +33,12 @@ function getData() {
                 const tr = $("<tr></tr>")
                     .append($("<td></td>").text(item.gridx))
                     .append($("<td></td>").text(item.gridy))
+                    .append($("<td></td>").text(item.v1x))
+                    .append($("<td></td>").text(item.v1y))
+                    .append($("<td></td>").text(item.v2x))
+                    .append($("<td></td>").text(item.v2y))
+                    .append($("<td></td>").text(item.v3x))
+                    .append($("<td></td>").text(item.v3y))
                     .append(
                         $("<td></td>").append(
                             $("<button>Edit</button>").on("click", function () {
