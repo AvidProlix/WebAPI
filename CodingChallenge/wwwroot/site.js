@@ -78,9 +78,9 @@ function getData() {
                 
                 // the triangle
                 context.beginPath();
-                context.moveTo(item.v1x, item.v1y);
-                context.lineTo(item.v2x, item.v2y);
-                context.lineTo(item.v3x, item.v3y);
+                context.moveTo(item.v1y, item.v1x);
+                context.lineTo(item.v2y, item.v2x);
+                context.lineTo(item.v3y, item.v3x);
                 context.closePath();
 
                 // the outline
