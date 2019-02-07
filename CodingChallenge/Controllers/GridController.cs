@@ -19,14 +19,6 @@ namespace CodingChallenge.Controllers
         public GridController(TriangleContext context)
         {
             _context = context;
-
-            if (_context.TriangleItems.Count() == 0)
-            {
-                // Create a new TriangleItem if collection is empty,
-                // which means you can't delete all TriangleItems.
-                _context.TriangleItems.Add(new TriangleItem { V1x = 10 });
-                _context.SaveChanges();
-            }
         }
 
         // GET: api/Grid

@@ -67,15 +67,7 @@ function getData() {
                     .append($("<td></td>").text(item.v2y))
                     .append($("<td></td>").text(item.v3x))
                     .append($("<td></td>").text(item.v3y))
-                    .append(
-                        $("<td></td>").append(
-                            $("<button>Edit</button>").on("click", function () {
-                                editItem(item.id);
-                            })
-                        )
-                    )
-                    .append(
-                        $("<td></td>").append(
+                    .append($("<td></td>").append(
                             $("<button>Delete</button>").on("click", function () {
                                 deleteItem(item.id);
                             })

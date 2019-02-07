@@ -30,7 +30,7 @@
     </style>
 </head>
 <body>
-    <h1>Triangle CRUD</h1>
+    <h1>Triangle Calculation</h1>
     <h3>Add by Grid Coordinates</h3>
     <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
         <input type="text" id="add-gridx" placeholder="X Coordinate">
@@ -61,17 +61,6 @@
         <input type="submit" value="Add">
     </form>
 
-    <div id="spoiler">
-        <h3>Edit</h3>
-        <form class="my-form">
-            <input type="hidden" id="edit-id">
-            <input type="text" id="edit-gridx">
-            <input type="text" id="edit-gridy">
-            <input type="submit" value="Save">
-            <a onclick="closeInput()" aria-label="Close">&#10006;</a>
-        </form>
-    </div>
-
     <p id="counter"></p>
 
     <table>
@@ -85,15 +74,13 @@
             <th>V3X</th>
             <th>V3Y</th>
             <th></th>
-            <th></th>
         </tr>
         <tbody id="triangles"></tbody>
     </table>
 
     <div>
-        <p> Drawing </p>
+        <p> Drawing </p> 
             <canvas id="myCanvas" width="500" height="500"></canvas>
-        
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
