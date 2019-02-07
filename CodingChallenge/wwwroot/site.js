@@ -29,6 +29,34 @@ function getData() {
 
             getCount(data.length);
 
+            // get canvas to draw triangles on
+            var canvasElement = document.querySelector("#myCanvas");
+            var context = canvasElement.getContext("2d");
+            context.clearRect(0, 0, canvasElement.width, canvasElement.height);
+
+            // draw 60px by 60px boundry and grid
+            // inner Coulumns
+            context.beginPath();
+            context.strokeStyle = "black";
+            context.lineWidth = "2";
+            context.rect(10, 1, 10, 60);
+            context.stroke();
+            context.rect(30, 1, 10, 60);
+            context.stroke();
+            context.rect(40, 1, 10, 60);
+            context.stroke();
+            // inner rows
+            context.rect(1, 10, 60, 10);
+            context.stroke();
+            context.rect(1, 30, 60, 10);
+            context.stroke();
+            context.rect(1, 40, 60, 10);
+            context.stroke();
+            // outer box
+            context.strokeStyle = "black";
+            context.rect(1, 1, 60, 60);
+            context.stroke();
+
             $.each(data, function (key, item) {
                 const tr = $("<tr></tr>")
                     .append($("<td></td>").text(item.gridx))
@@ -55,6 +83,22 @@ function getData() {
                     );
 
                 tr.appendTo(tBody);
+                
+                // the triangle
+                context.beginPath();
+                context.moveTo(item.v1x, item.v1y);
+                context.lineTo(item.v2x, item.v2y);
+                context.lineTo(item.v3x, item.v3y);
+                context.closePath();
+
+                // the outline
+                context.lineWidth = 2;
+                context.strokeStyle = '#666666';
+                context.stroke();
+
+                // the fill color
+                context.fillStyle = "#FFCC00";
+                context.fill();
             });
 
             triangles = data;
